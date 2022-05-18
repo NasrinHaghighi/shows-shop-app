@@ -28,4 +28,10 @@
     width: 85%;
     margin-left: 25px;
     font-weight: 800;
+    padding-right: 30px;
+}
+
+.title {
+    color: var(--clr-text-1);
+    padding-right: 10px;
 }

@@ -3,10 +3,8 @@ import Box from '@mui/material/Box';
 import { useDispatch , useSelector} from 'react-redux';
 import Slider from '@mui/material/Slider';
 import styles from './FilterRang.module.css'
-// import {minpriceChangeHandel} from '../../redux/action/products'
 
-// import {maxpriceChangeHandel} from '../../redux/action/products'
-
+import { addMaxPrice, addMinPrice } from '../../feactures/filtersSlice';
 const valuetext=(value) =>{
   return `${value}`;
 }
@@ -22,7 +20,7 @@ const minDistance = 10;
   
  
 
-  const [value1, setValue1] = React.useState([100, 9000]);
+  const [value1, setValue1] = React.useState([100,1000]);
 
   const handleChange1 = (event, newValue, activeThumb) => {
     if (!Array.isArray(newValue)) {
@@ -36,20 +34,20 @@ const minDistance = 10;
     }
   };
 
-// useEffect(() => {
-//   dispatch(minpriceChangeHandel(value1[0],filterOption))
-//   }, [value1[0]])
+ useEffect(() => {
+   dispatch(addMaxPrice(value1[0]))
+  }, [value1[0]])
 
-// useEffect(() => {
-//   dispatch(maxpriceChangeHandel(value1[1],filterOption))
-//   }, [value1[1]])
+ useEffect(() => {
+  dispatch(addMinPrice(value1[1]))
+  }, [value1[1]])
 
 
   return (
       <>
       <div className={styles.line}></div>
     <Box className={styles.rang}>
-        <p>محدوده قیمت ( تومان)</p>
+        <p className={styles.title}>محدوده قیمت ( تومان)</p>
       <Slider
       className={styles.slider}
         getAriaLabel={() => 'Minimum distance'}
@@ -57,12 +55,12 @@ const minDistance = 10;
         min={100}
         max={1000}
         step={100}
-        //onChange={handleChange1}
+        onChange={handleChange1}
         valueLabelDisplay="auto"
         getAriaValueText={valuetext}
         disableSwap
       />
-      <di className={styles.priceContainer}> <p>{value1[0]}</p> <p>{value1[1]}</p>  </di> 
+      <di className={styles.priceContainer}> <p>{value1[1]}</p> <p>{value1[0]}</p>  </di> 
 
      
     </Box>

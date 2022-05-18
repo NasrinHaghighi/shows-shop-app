@@ -3,9 +3,14 @@ import Image from 'next/image'
 import Banner from '../components/Banner/Banner'
 import BannerFooter from '../components/BannerFooter/BannerFooter'
 import Feature from '../components/Feature/Feature'
-import styles from '../styles/Home.module.css'
+import styles from './Index.module.css'
 
 import { useGetProductsQuery } from '../services/fetchProducts'
+
+import Product from '../components/Product/Product'
+
+//all products***//
+import{ products }from '../services/productsList'
 
 
 export default function Home() {
@@ -22,6 +27,11 @@ export default function Home() {
       <main className={styles.main}>
       <Banner />
       <BannerFooter />
+      <div className={styles.relevent}>
+      {products.slice(0, 4).map((item)=>{
+      return <Product key={item.id} {...item}/>
+    })}
+      </div>
       <Feature />
       </main>
 

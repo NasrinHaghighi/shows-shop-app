@@ -16,13 +16,16 @@ export const filtersSlice = createSlice({
         },
         addCategory: (state, action) => {
             state.category = action.payload
-        }
-
-
-
+        },
+        addMaxPrice: (state, action) => {
+            state.maxPrice = action.payload
+        },
+        addMinPrice: (state, action) => {
+            state.minPrice = action.payload
+        },
     },
 
 })
 
-export const { addBrand, addCategory } = filtersSlice.actions
+export const { addBrand, addCategory, addMaxPrice, addMinPrice } = filtersSlice.actions
 export default filtersSlice.reducer
