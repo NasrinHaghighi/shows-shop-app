@@ -1,0 +1,23 @@
+.bannerFooter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    padding-left: 40px;
+}
+
+.icons {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.obj {
+    height: 65px;
+    margin: auto;
+}
+
+.chat {
+    transform: translateY(-40px);
+}

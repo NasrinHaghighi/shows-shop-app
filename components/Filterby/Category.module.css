@@ -1,0 +1,16 @@
+.main {
+    margin-bottom: 5px;
+    background-color: var( --clr-bgProduct-1);
+    margin-top: 5px;
+}
+
+.list {
+    width: 100%;
+    font-family: 'IRANSans', sans-serif;
+}
+
+.listItem {}
+
+.listItem label {
+    font-family: 'IRANSans', sans-serif;
+}

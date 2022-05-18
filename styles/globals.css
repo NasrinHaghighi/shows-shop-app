@@ -1,16 +1,96 @@
+@font-face {
+    font-family: 'IRANSans';
+    src: local('../used-fonts/IRANSans');
+}
+
+:root {
+    --clr-bgProduct-1: #F5F8FA;
+    --clr-orange-1: #FF642E;
+    --clr-text-1: #71718D;
+    --clr-footer-1: #000033;
+    --clr-text-2: #E2E2E7;
+    --clr-inactivetext-1: #A9A9BA;
+    --clr-text-3: #555577;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: 'IRANSans', sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input {
+    border: none;
+    outline: none;
+    font-family: 'IRANSans', sans-serif;
+}
+
+input::placeholder {
+    font-family: 'IRANSans', sans-serif;
+    font-size: 16px;
+    color: #393960;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+span {
+    font-family: 'IRANSans', sans-serif !important;
+}
+
+button {
+    font-family: 'IRANSans', sans-serif !important;
+}
+
+
+/* * 
+//TO PUT THE CHECKBOX IN THE LEFT SIDE */
+
+.MuiFormControlLabel-root {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between !important;
+    margin-right: 0px !important;
+    margin: -5px 0;
+}
+
+
+/* //style for checkbox squar */
+
+.MuiCheckbox-colorSecondary.Mui-checked {
+    color: #232122 !important;
+}
+
+.MuiTypography-body1 {
+    font-family: 'IRANSans', sans-serif !important;
+}
+
+
+/* STYLE FOR CHECHBOX LINE 3 AND 4 */
+
+.css-dmmspl-MuiFormGroup-root {
+    background-color: var( --clr-bgProduct-1) !important;
+    padding: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+}
+
+
+/* ////style for rang filter price container/// */
+
+.css-eg0mwd-MuiSlider-thumb {
+    display: none;
 }

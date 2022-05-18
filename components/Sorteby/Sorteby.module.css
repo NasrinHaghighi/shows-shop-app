@@ -1,0 +1,37 @@
+.sortby {
+    margin: 35px 0 45px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.sortBtn {
+    color: var(--clr-inactivetext-1);
+}
+
+.sorteUl {
+    display: flex;
+}
+
+.sorteItem {
+    width: 140px;
+    list-style: none;
+    height: 46px;
+    line-height: 46px;
+    padding: 0 12px;
+    color: var( --clr-text-3);
+    cursor: pointer;
+}
+
+.active {
+    display: inline-block;
+    text-align: center;
+    width: 140px;
+    height: 46px;
+    line-height: 46px;
+    list-style: none;
+    padding: 0 12px;
+    background-color: var(--clr-footer-1);
+    color: #fff;
+    cursor: pointer;
+}

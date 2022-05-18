@@ -1,0 +1,41 @@
+.nav {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    height: 96px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 77px;
+}
+
+.nav2 {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    height: 96px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 0 15px;
+    box-shadow: 0px 9px 27px 0px rgba(0, 0, 0, 0.28);
+}
+
+.icons {
+    margin-top: 20px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.humburger {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

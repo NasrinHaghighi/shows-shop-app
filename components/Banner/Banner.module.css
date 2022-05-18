@@ -1,0 +1,51 @@
+.banner {
+    width: 100%;
+    padding: 0 77px;
+}
+
+.mainBanner {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.bannerRight {
+    background-color: var( --clr-bgProduct-1);
+    padding: 180px 115px;
+}
+
+.bannerLeft {
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    justify-content: center;
+    padding: 0 70px;
+    line-height: 20px;
+}
+
+.bannerLeft div h1 {
+    white-space: nowrap;
+    font-size: 96px;
+    transform: translateX(2.2em);
+}
+
+.bannerLeft h3 {
+    font-size: 56px;
+    font-family: IRANSans;
+    font-weight: 400;
+}
+
+.bannerLeft h3 span {
+    font-size: 56px;
+    color: var( --clr-orange-1);
+}
+
+.bannerLeft p {
+    font-size: 32px;
+    font-family: IRANSans;
+    font-weight: 400;
+    color: var(--clr-text-1);
+    line-height: normal;
+}

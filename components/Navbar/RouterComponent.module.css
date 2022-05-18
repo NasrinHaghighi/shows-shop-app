@@ -1,0 +1,15 @@
+.router {
+    margin-right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstpath {
+    color: var(--clr-inactivetext-1);
+    font-size: 16px;
+}
+
+.arrow {
+    margin: 0 24px;
+}

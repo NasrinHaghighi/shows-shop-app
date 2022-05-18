@@ -1,0 +1,17 @@
+.btnContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.btnContainer button {
+    background-color: var( --clr-footer-1) !important;
+    color: #FFF;
+    height: 48px;
+    width: 150px;
+}
+
+.btnContainer button:hover {
+    background-color: var( --clr-footer-1) !important;
+    color: #FFF;
+}
