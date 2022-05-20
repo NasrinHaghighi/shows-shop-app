@@ -7,7 +7,7 @@ import Stars from '../Stars/Stars'
 
 const Product=({...item})=> {
  const images=item.images
-console.log(item)
+//console.log(item)
   return (
     <div className={styles.product}>
      <div className={styles.title}>       <span>{item.name}</span>       <div><Stars stars={item.stars}/></div>       </div>

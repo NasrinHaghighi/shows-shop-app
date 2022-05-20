@@ -35,12 +35,12 @@ const minDistance = 10;
   };
 
  useEffect(() => {
-   dispatch(addMaxPrice(value1[0]))
-  }, [value1[0]])
+   dispatch(addMaxPrice(value1[1]))
+  }, [value1[1]])
 
  useEffect(() => {
-  dispatch(addMinPrice(value1[1]))
-  }, [value1[1]])
+  dispatch(addMinPrice(value1[0]))
+  }, [value1[0]])
 
 
   return (

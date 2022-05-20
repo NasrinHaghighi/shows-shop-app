@@ -1,0 +1,23 @@
+.conatiner {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 0 50px 0;
+}
+
+.btn {
+    width: 46px;
+    height: 46px;
+    background-color: var(--clr-whit);
+    margin: 5px;
+    border: 1px solid var( --clr-inactivetext-1);
+}
+
+.active {
+    margin: 5px;
+    width: 46px;
+    height: 46px;
+    background-color: var(--clr-footer-1);
+    color: var(--clr-whit);
+}

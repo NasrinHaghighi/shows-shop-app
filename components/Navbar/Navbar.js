@@ -19,7 +19,7 @@ const Navbar=()=> {
     if(pathame === '/'){
         flage=true
     }
-    console.log(flage)
+    //console.log(flage)
 
 
     return (

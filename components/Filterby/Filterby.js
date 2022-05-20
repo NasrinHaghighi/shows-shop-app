@@ -7,8 +7,15 @@ import Category from './Category';
 import Brand from './Brand'
 import Availeble from './Availeble';
 import FilterRange from './FilterRang';
+import {fillterProductsHandler} from '../../feactures/allProductsSlice'
+import { useDispatch, useSelector } from 'react-redux';
 
 function Filterby() {
+  const dispatch=useDispatch()
+  const filters= useSelector(state=>state.filters)
+  //console.log(filters)
+
+
   return (
     <FormControl className={styles.container}>
         
@@ -17,7 +24,7 @@ function Filterby() {
        <Availeble />
        <FilterRange />
        <div className={styles.btnContainer}>
-       <Button  onClick={() => { alert('clicado'); }}> اعمال فیلترها </Button>
+       <Button  onClick={() => dispatch(fillterProductsHandler(filters))}> اعمال فیلترها </Button>
         <Button  onClick={() => { alert('clicado'); }}> پاک کردن</Button>
         </div>
         </FormControl>

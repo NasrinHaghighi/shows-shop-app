@@ -1,7 +1,7 @@
 export const products = [{
 
         'id': 1,
-        'name': 'کتونی نایک ساقدار ',
+        'name': 'کتونی نایک ساقدار مردانه',
         'modle': '88888',
         'price': 200,
         'brand': 'نایک',
@@ -37,7 +37,7 @@ export const products = [{
     },
     {
         'id': 2,
-        'name': 'کفش مخصوص پیاده روی ',
+        'name': 'زنانه آدیداس مخصوص پیاده روی ',
         'model': ' MU110',
         'price': 300,
         'brand': 'آدیداس',
@@ -73,7 +73,7 @@ export const products = [{
     },
     {
         'id': 3,
-        'name': 'کفش کوهنوردی مردانه',
+        'name': 'کفش ریباک کوهنوردی بچه گانه',
         'model': ' A21X',
         'price': 400,
         'brand': 'ریباک',
@@ -109,11 +109,11 @@ export const products = [{
     },
     {
         'id': 4,
-        'name': 'کفش مخصوص دویدن  ',
+        'name': 'کفش اسیکس مخصوص دویدن بچهگانه ',
         'model': ' A21X',
         'price': 500,
         'brand': 'اسیکس',
-        'category': 'مردانه',
+        'category': 'بچه گانه',
         'stars': 1,
         'ShortDescription': 'مناسب برای پیاده روی',
         'sizes': [36, 38, 40, 42, 44, 46],
@@ -146,7 +146,7 @@ export const products = [{
     {
 
         'id': 5,
-        'name': 'کتونی نایک ساقدار ',
+        'name': 'کتونی نایک ساقدار مردانه',
         'modle': '66666',
         'price': 600,
         'brand': 'نایک',
@@ -182,7 +182,7 @@ export const products = [{
     },
     {
         'id': 6,
-        'name': 'کفش مخصوص پیاده روی ',
+        'name': 'زنانه آدیداس مخصوص پیاده روی ',
         'model': ' MU110',
         'price': 700,
         'brand': 'آدیداس',
@@ -219,7 +219,7 @@ export const products = [{
     },
     {
         'id': 7,
-        'name': 'کفش کوهنوردی مردانه',
+        'name': 'کفش ریباک کوهنوردی  بچهگانه',
         'model': ' A21X',
         'price': 800,
         'brand': 'ریباک',
@@ -255,7 +255,7 @@ export const products = [{
     },
     {
         'id': 8,
-        'name': 'کفش مخصوص دویدن  ',
+        'name': 'اسیکس مخصوص دویدن مردانه ',
         'model': ' A21X',
         'price': 900,
         'brand': 'اسیکس',
@@ -291,7 +291,7 @@ export const products = [{
     },
     {
         'id': 9,
-        'name': 'کفش مخصوص دویدن  ',
+        'name': ' مردانه اسیکس مخصوص دویدن',
         'model': ' A21X',
         'price': 1000,
         'brand': 'اسیکس',

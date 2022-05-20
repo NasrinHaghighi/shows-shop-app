@@ -1,3 +1,4 @@
+import React, {useEffect} from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from '../components/Banner/Banner'
@@ -9,13 +10,29 @@ import { useGetProductsQuery } from '../services/fetchProducts'
 
 import Product from '../components/Product/Product'
 
-//all products***//
-import{ products }from '../services/productsList'
+// //all products***//
+
+import { getAllProducts } from '../feactures/allProductsSlice'
+import { useDispatch, useSelector } from 'react-redux'
+
 
 
 export default function Home() {
-  const { data} = useGetProductsQuery('bulbasaur')
-  console.log(data)
+
+  const dispatch= useDispatch();
+   let products=useSelector((state=>state.products))
+   products=products.products
+
+  
+  useEffect(() => {
+       dispatch(getAllProducts())
+    }, [])
+
+
+  //const { data} = useGetProductsQuery('bulbasaur')
+  //console.log(data)
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -28,9 +45,9 @@ export default function Home() {
       <Banner />
       <BannerFooter />
       <div className={styles.relevent}>
-      {products.slice(0, 4).map((item)=>{
-      return <Product key={item.id} {...item}/>
-    })}
+   {products && products.slice(0,4).map((item)=>{
+  return <Product key={item.id}{...item}/>
+  })}  
       </div>
       <Feature />
       </main>
