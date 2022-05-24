@@ -1,0 +1,12 @@
+.favoraite {
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 24px;
+    margin-top: 45px;
+}
+
+.favoraite p {
+    margin-right: 15px;
+}

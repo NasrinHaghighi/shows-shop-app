@@ -2,12 +2,12 @@ export const products = [{
 
         'id': 1,
         'name': 'کتونی نایک ساقدار مردانه',
-        'modle': '88888',
+        'model': '888',
         'price': 200,
         'brand': 'نایک',
         'category': 'مردانه',
         'stars': 4,
-        'ShortDescription': 'کتونی نایک ساقدار مدل 56890 مناسب برای پیاده روی',
+        'ShortDescription': ' مناسب برای پیاده روی',
         'sizes': [36, 38, 40, 42, 44, 46],
         "colors": ["#ff0000", "#ff0145", "#f43b86", '#f47b86', '#efb7b7'],
         'images': [
@@ -109,7 +109,7 @@ export const products = [{
     },
     {
         'id': 4,
-        'name': 'کفش اسیکس مخصوص دویدن بچهگانه ',
+        'name': ' اسیکس مخصوص دویدن بچه گانه ',
         'model': ' A21X',
         'price': 500,
         'brand': 'اسیکس',

@@ -1,0 +1,8 @@
+.ProductSinglePageContainer {}
+
+.singlepageBanner {
+    padding: 135px 80px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+}

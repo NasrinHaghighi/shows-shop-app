@@ -8,6 +8,7 @@ const initialState = {
 }
 
 export const allProductsSlice = createSlice({
+
     name: 'products',
     initialState,
     reducers: {
@@ -18,6 +19,7 @@ export const allProductsSlice = createSlice({
         fillterProductsHandler: (state, action) => {
             const { brand, category, minPrice, maxPrice } = action.payload
             let tempProducts = [...products];
+
             console.log(`minprice${minPrice}`)
             console.log(`maxprice${maxPrice}`)
                 //console.log(products)
@@ -37,8 +39,33 @@ export const allProductsSlice = createSlice({
                 tempProducts = tempProducts.filter(item => category.indexOf(item.category) !== -1)
                 state.products = tempProducts
             }
-
-
+        },
+        sortProductsHandler: (state, action) => {
+            if (action.payload === 'mostCheapest') {
+                let tempProducts = [...products];
+                tempProducts = tempProducts.sort((a, b) => a.price - b.price)
+                state.products = tempProducts
+            }
+            if (action.payload === 'mostExpensive') {
+                let tempProducts = [...products];
+                tempProducts = tempProducts.sort((a, b) => b.price - a.price)
+                state.products = tempProducts
+            }
+            if (action.payload === 'mostPopular') {
+                let tempProducts = [...products];
+                tempProducts = tempProducts.filter(item => item.mostPopular === true)
+                state.products = tempProducts
+            }
+            if (action.payload === 'bestSeller') {
+                let tempProducts = [...products];
+                tempProducts = tempProducts.filter(item => item.bestSeller === true)
+                state.products = tempProducts
+            }
+            if (action.payload === 'mostVisited') {
+                let tempProducts = [...products];
+                tempProducts = tempProducts.filter(item => item.mostVisited === true)
+                state.products = tempProducts
+            }
 
         }
 
@@ -48,7 +75,7 @@ export const allProductsSlice = createSlice({
 })
 
 
-export const { getAllProducts, fillterProductsHandler } = allProductsSlice.actions
+export const { getAllProducts, fillterProductsHandler, sortProductsHandler } = allProductsSlice.actions
 export default allProductsSlice.reducer
 
 // tempProducts = tempProducts.filter((item) => {

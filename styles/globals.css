@@ -97,3 +97,18 @@ button {
 .css-eg0mwd-MuiSlider-thumb {
     display: none;
 }
+
+
+/******************carusel in the single page */
+
+.slide.selected {
+    padding: 20px;
+}
+
+.slide.selected img {
+    padding: 60px;
+}
+
+.carousel .thumbs {
+    text-align: right !important;
+}

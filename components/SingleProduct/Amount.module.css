@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+    font-size: 24px;
+}
+
+.content {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.content span {
+    background-color: var( --clr-bgProduct-1);
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.content button {
+    font-size: 24px;
+    background-color: var( --clr-bgProduct-1);
+}

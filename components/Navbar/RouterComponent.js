@@ -13,6 +13,7 @@ function RouterComponent() {
     if(pathname === '/products'){
         flage = true
     }
+
   return (
     <div className={styles.router}>
        {flage ? <ProductRouter /> : ''}

@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import styles from './Sorteby.module.css'
+import {sortProductsHandler} from '../../feactures/allProductsSlice'
+import { useDispatch } from 'react-redux';
 
 const data = [  
     {  
@@ -37,12 +39,15 @@ const data = [
 
 function Sorteby() {
     const [activeLi, setActiveLi] =useState(1)
+
+    const dispatch= useDispatch()
   return (
     <div className={styles.sortby}>
         <span className={styles.sortBtn}> مرتب سازی بر اساس :</span>
         <ul className={styles.sorteUl}>
         {data.map((item)=>{
-            return <li key={item.id} value={item.value} onClick={()=>setActiveLi(item.id)}
+            return <li key={item.id} value={item.value}
+             onClick={()=>{setActiveLi(item.id);dispatch(sortProductsHandler(item.value))}}
              className={activeLi === item.id ? styles.active:styles.sorteItem }>
                 {item.type}
                 </li>

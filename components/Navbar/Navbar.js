@@ -16,9 +16,12 @@ const Navbar=()=> {
     const router = useRouter();
     const pathame=router.pathname
     var flage;
+    var flage2;
+
     if(pathame === '/'){
         flage=true
     }
+  
     //console.log(flage)
 
 

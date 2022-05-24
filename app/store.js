@@ -4,6 +4,7 @@ import { setupListeners } from "@reduxjs/toolkit/dist/query";
 import { productsApi } from '../services/fetchProducts'
 import filtersReducer from "../feactures/filtersSlice";
 import allProductsSlice from "../feactures/allProductsSlice";
+import cartSlice from '../feactures/cartSlice'
 
 
 export const store = configureStore({
@@ -11,6 +12,7 @@ export const store = configureStore({
         [productsApi.reducerPath]: productsApi.reducer,
         filters: filtersReducer,
         products: allProductsSlice,
+        cart: cartSlice,
 
 
     },

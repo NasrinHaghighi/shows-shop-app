@@ -1,0 +1,31 @@
+.singleProductInfo {
+    direction: rtl;
+    background-color: var(--clr-bgProduct-1);
+    padding: 80px 45px;
+}
+
+.header {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.p {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.price {
+    background-color: var( --clr-whit);
+    width: auto;
+    display: inline-block;
+    padding: 20px 15px;
+    font-size: 24px;
+}
+
+.addtoCart {
+    background-color: var(--clr-footer-1);
+    color: var(--clr-whit);
+    font-size: 24px;
+    width: 400px;
+    height: 72px;
+}
