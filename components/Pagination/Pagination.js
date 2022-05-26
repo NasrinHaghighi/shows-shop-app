@@ -38,9 +38,12 @@ const Pagination=()=> {
     <div className={styles.conatiner}>
       <div></div>
       <div>
-          {pages.map((item)=>{
+          {pages.map((item, index)=>{
             return(
-                <button className={item.page === page ? styles.active : styles.btn  } onClick={()=>changePageHandle(item.page)}>{item.page}</button>
+                <button
+                 className={item.page === page ? styles.active : styles.btn  } 
+                 key={index}
+                 onClick={()=>changePageHandle(item.page)}>{item.page}</button>
             )
              })}
          <button className={styles.btn} onClick={()=>AddOnePage(page)} >   <Image src={arrowBlack}/> </button>

@@ -1,0 +1,28 @@
+.main {}
+
+.conatiner p {
+    font-size: 24px;
+}
+
+.head {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.head span {
+    margin-right: 10px;
+}
+
+.name {
+    font-size: 18px;
+    color: var(--clr-text-4);
+}
+
+.conatiner2 {
+    font-size: 24px;
+    margin-top: 70px;
+    width: 100%;
+    background-color: var( --clr-whit);
+    padding: 10px;
+}

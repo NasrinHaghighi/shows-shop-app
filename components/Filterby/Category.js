@@ -46,7 +46,7 @@ function Category() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>دسته بندی</Typography>
+          <Typography component="span">دسته بندی</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -55,11 +55,12 @@ function Category() {
              
              return(  
  
-                   <ListItem className={styles.listItem}>
+                   <ListItem  key={c} className={styles.listItem}>
                   <FormControlLabel control={<Checkbox
                    type="checkbox"
                    name={c}
                   value={c}
+                  
                   color="default"
                  //checked={filterOption.selectedBrand.includes(c)}
                  onChange={makeBrandsList}

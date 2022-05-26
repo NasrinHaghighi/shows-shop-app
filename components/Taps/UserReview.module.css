@@ -1,0 +1,60 @@
+.main {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+}
+
+.conatiner p {
+    font-size: 24px;
+}
+
+.head {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.head span {
+    margin-right: 10px;
+}
+
+.name {
+    font-size: 18px;
+    color: var(--clr-text-4);
+}
+
+.conatiner2 {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.conatiner2 p {
+    margin: 0;
+}
+
+.btn {
+    background-color: var(--clr-footer-1);
+    width: 392px;
+    height: 72px;
+    color: var(--clr-whit);
+    font-size: 24px;
+    margin: 35px auto !important;
+}
+
+.conatiner3 {
+    margin-top: 70px;
+    width: 100%;
+    background-color: var( --clr-whit);
+    padding: 10px;
+}
+
+.conatiner3 p {
+    color: var( --clr-inactivetext-1);
+    font-size: 24px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}

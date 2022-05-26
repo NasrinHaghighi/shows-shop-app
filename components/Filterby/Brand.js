@@ -47,19 +47,17 @@ useEffect(() => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>برند </Typography>
+          <Typography component="span">برند </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
           <List className={styles.list}>
               {brands.map((c)=>{
-             
-             return(  
- 
-                   <ListItem className={styles.listItem}>
+         return(  
+                   <ListItem  key={c} className={styles.listItem}>
                   <FormControlLabel control={<Checkbox
                    type="checkbox"
-                   name={c}
+                    name={c}
                   value={c}
                   color="default"
                  //checked={filterOption.selectedBrand.includes(c)}

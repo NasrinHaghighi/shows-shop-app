@@ -16,7 +16,7 @@ const {images}= singleProduct
   return (
     <div className={styles.continer}>
       <Carousel  showArrows={true} infiniteLoop={true} >
-    {images.map(item=> <img src={item.src} />) }
+    {images.map(item=> <img src={item.src} className={styles.img}/>) }
      
      </Carousel>
 

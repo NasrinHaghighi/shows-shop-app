@@ -1,8 +1,6 @@
 .continer {
     background-color: var( --clr-bgProduct-1);
+    height: 800px;
 }
 
-.img {
-    width: 400px;
-    height: 220px;
-}
+.img {}

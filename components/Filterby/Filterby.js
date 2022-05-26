@@ -19,10 +19,10 @@ function Filterby() {
   return (
     <FormControl className={styles.container}>
         
-       <Category />
+       <Category /> 
        <Brand />
        <Availeble />
-       <FilterRange />
+        <FilterRange /> 
        <div className={styles.btnContainer}>
        <Button  onClick={() => dispatch(fillterProductsHandler(filters))}> اعمال فیلترها </Button>
         <Button  onClick={() => { alert('clicado'); }}> پاک کردن</Button>
