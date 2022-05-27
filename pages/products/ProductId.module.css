@@ -7,3 +7,29 @@
     grid-template-columns: 1.5fr 1fr;
     gap: 20px;
 }
+
+.relevent {}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 80px 40px 80px;
+}
+
+.productsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 80px;
+    direction: rtl;
+}
+
+.titleText {
+    font-size: 36px;
+    color: var( --clr-footer-1);
+}
+
+.link {
+    font-size: 24px;
+    color: var( --clr-footer-1);
+}

@@ -12,4 +12,5 @@
 .productsContainer {
     display: flex;
     flex-wrap: wrap;
+    direction: rtl;
 }
