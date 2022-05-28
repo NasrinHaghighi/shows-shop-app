@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Link from 'next/link'
 import Amount from './Amount'
 import ColorPart from './ColorPart'
 import Favorite from './Favorite'
@@ -9,7 +10,7 @@ import SizePart from './SizePart'
 import { useDispatch } from 'react-redux'
 
 function SingleProductInfo({...singleProduct}) {
-      const{name, id,model, ShortDescription, price, sizes,colors} =singleProduct
+      const{name, id,model, ShortDescription, price, sizes,colors ,images} =singleProduct
 
       const dispatch=useDispatch()
 
@@ -47,7 +48,7 @@ function SingleProductInfo({...singleProduct}) {
     
 
 const handelAddItem=()=>{
-dispatch(addItem({id, mainSize, mainColor, mainAmount , price, name, ShortDescription, model}))
+dispatch(addItem({id, mainSize, mainColor, mainAmount , price, name, ShortDescription, model ,images}))
 }
     
  
@@ -61,7 +62,7 @@ dispatch(addItem({id, mainSize, mainColor, mainAmount , price, name, ShortDescri
              <ColorPart colors={colors} selectColor={selectColor} mainColor={mainColor}/>
             <Amount increment={increment} decrement={decrement} mainAmount={mainAmount}/>
 
-            <button className={styles.addtoCart} onClick={handelAddItem}>افزودن به سبد خرید</button>
+            <button className={styles.addtoCart} onClick={handelAddItem}> <Link href='/cart'><a>افزودن به سبد خرید</a></Link></button>
             <Favorite />
     </div>
   )

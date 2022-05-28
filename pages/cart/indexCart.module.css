@@ -1,0 +1,26 @@
+.container {
+    direction: rtl;
+    padding: 135px 80px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header p {
+    font-size: 36px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
+
+.cartItem {}
+
+.cartcalcu {
+    background-color: darkorange;
+}

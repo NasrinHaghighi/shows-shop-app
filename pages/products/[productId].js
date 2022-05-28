@@ -21,7 +21,7 @@ function SingleProductPage() {
     let p = products.products
     //console.log(p)
    const singleProduct = p.find(item => item.id == productId)
-   console.log(singleProduct)
+  
   
   return (
     <>

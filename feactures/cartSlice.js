@@ -8,7 +8,7 @@ export const cartSlice = createSlice({
     initialState,
     reducers: {
         addItem: (state, action) => {
-            const { id, mainColor, mainSize, mainAmount, price, name, model, ShortDescription } = action.payload
+            const { id, mainColor, mainSize, mainAmount, price, name, model, ShortDescription, images } = action.payload
             let tempItem = state.cart.find((item) => item.newId === id + mainColor + mainSize)
             if (tempItem) {
                 state.cart.map((item) => {
@@ -28,7 +28,9 @@ export const cartSlice = createSlice({
                     name: name,
                     price: price,
                     model: model,
-                    shortDescription: ShortDescription
+                    shortDescription: ShortDescription,
+                    images: images
+
                 }
                 state.cart.push(newItem)
             }
