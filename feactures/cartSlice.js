@@ -36,18 +36,16 @@ export const cartSlice = createSlice({
             }
 
 
+        },
+        deleteItem: (state, action) => {
+
+            let newCart = state.cart.filter(item => item.newId !== action.payload)
+            state.cart = newCart
         }
-    },
+    }
+
 
 })
 
-export const { addItem } = cartSlice.actions
+export const { addItem, deleteItem } = cartSlice.actions
 export default cartSlice.reducer
-
-// let tempcart = cart.map((item) => {
-//     if (item.newId === id + mainColor + mainSize) {
-//         return {...item, amount: item.amount + mainAmount }
-//     } else {
-//         return {...item }
-//     }
-// }

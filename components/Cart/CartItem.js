@@ -1,11 +1,22 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './CartItem.module.css'
+import trash from '../../public/images/Group 690.png'
+import {deleteItem }from '../../feactures/cartSlice'
+import {useDispatch} from 'react-redux'
+
 
 function CartItem({...item}) {
-    console.log(item)
-    const{images,name, model, ShortDescription,price,discont,amount, size,color} =item
-    console.log(images[0])
+  
+    const{images,name, model, ShortDescription,price,discont,amount, size,color, newId} =item
+   
+
+    const dispatch=useDispatch()
+
+    const handelDelet=()=>{
+       dispatch(deleteItem(newId))
+       
+    }
   return (
     <div className={styles.CartItemConatiner}>
         <div className={styles.CartItemImage}>
@@ -20,6 +31,7 @@ function CartItem({...item}) {
          <div className={styles.color}>  رنگ: <div className={styles.circle} style={{background:color}}></div></div>
          <div className={styles.amount}> تعداد: <span> {amount} </span> </div>
         </div>
+        <div className={styles.trash} onClick={handelDelet}><Image className={styles.img} src={trash}/></div>
     </div>
   )
 }

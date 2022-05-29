@@ -60,7 +60,7 @@ const minDistance = 10;
         getAriaValueText={valuetext}
         disableSwap
       />
-      <di className={styles.priceContainer}> <p>{value1[1]}</p> <p>{value1[0]}</p>  </di> 
+      <div className={styles.priceContainer}> <p>{value1[1]}</p> <p>{value1[0]}</p>  </div> 
 
      
     </Box>

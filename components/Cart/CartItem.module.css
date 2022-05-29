@@ -1,7 +1,7 @@
 .CartItemConatiner {
     width: 100%;
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr auto 1fr;
     background-color: var(--clr-bgProduct-1);
     margin-bottom: 15px;
 }
@@ -70,4 +70,14 @@
 
 .amount span {
     margin: 0 10px;
+}
+
+.trash {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-top: 20px;
+    padding-left: 20px;
+    cursor: pointer;
 }
