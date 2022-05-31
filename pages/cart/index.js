@@ -5,6 +5,7 @@ import Link from 'next/link'
 import arrowback from '../../public/images/Group 974.png'
 import {useSelector} from 'react-redux'
 import CartItem from '../../components/Cart/CartItem'
+import CartCalcu from '../../components/Cart/CartCalcu'
 
 function index() {
   let cart= useSelector((state)=> state.cart)
@@ -28,7 +29,7 @@ function index() {
            
           </div>
           <div className={styles.cartcalcu}>
-            gg
+           <CartCalcu />
           </div>
         </div>
        

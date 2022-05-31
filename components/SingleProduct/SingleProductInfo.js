@@ -10,7 +10,7 @@ import SizePart from './SizePart'
 import { useDispatch } from 'react-redux'
 
 function SingleProductInfo({...singleProduct}) {
-      const{name, id,model, ShortDescription, price, sizes,colors ,images} =singleProduct
+      const{name, id,model, ShortDescription, price, sizes,colors ,images ,discont} =singleProduct
 
       const dispatch=useDispatch()
 
@@ -48,16 +48,21 @@ function SingleProductInfo({...singleProduct}) {
     
 
 const handelAddItem=()=>{
-dispatch(addItem({id, mainSize, mainColor, mainAmount , price, name, ShortDescription, model ,images}))
+dispatch(addItem({id, mainSize, mainColor, mainAmount , price, name, ShortDescription, model ,images, discont}))
 }
     
+const finalPrice=price-(price*discont)/100
  
   return (
     <div className={styles.singleProductInfo}>
              <h1 className={styles.header}>{name} مدل {model} </h1>
 
              <p className={styles.p}>{name} مدل {model} {ShortDescription}</p>
-             <div className={styles.price}> قیمت :{price} تومان</div>
+             <div className={styles.priceConatiner}>
+             <div className={discont>0 ?   styles.priceWithDiscont: styles.price}> قیمت :{price} تومان</div>
+             {discont ?  <div className={styles.discont}> قیمت :{finalPrice} تومان</div> :'' }
+             
+             </div>
              <SizePart sizes={sizes} changeSize={changeSize} mainSize={mainSize}/>
              <ColorPart colors={colors} selectColor={selectColor} mainColor={mainColor}/>
             <Amount increment={increment} decrement={decrement} mainAmount={mainAmount}/>

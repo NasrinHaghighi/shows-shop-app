@@ -20,6 +20,30 @@
     display: inline-block;
     padding: 20px 15px;
     font-size: 24px;
+    position: relative;
+}
+
+.priceWithDiscont {
+    background-color: var( --clr-whit);
+    width: auto;
+    display: inline-block;
+    padding: 20px 15px;
+    font-size: 24px;
+    position: relative;
+}
+
+.priceWithDiscont::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 1px solid red;
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg)
 }
 
 .addtoCart {
@@ -28,4 +52,19 @@
     font-size: 24px;
     width: 400px;
     height: 72px;
+}
+
+
+/*//////////*/
+
+.priceConatiner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.discont {
+    padding: 20px 15px;
+    font-size: 24px;
+    background-color: var(--clr-bg-2);
 }
