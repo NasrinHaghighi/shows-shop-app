@@ -1,0 +1,79 @@
+.form {
+    background-color: var( --clr-bgProduct-1);
+    padding-top: 40px;
+    padding-right: 24px;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.formControl {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    margin-bottom: 20px;
+}
+
+.stateConatiner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.label {
+    font-size: 14px;
+    color: #555577;
+    margin-bottom: 10px;
+}
+
+.input {
+    height: 72px;
+    padding: 15px;
+}
+
+.btn {
+    background-color: #00C775;
+    width: 100%;
+    display: block;
+}
+
+.submitBtn {
+    display: block;
+    background-color: #373736;
+    color: #ffff;
+    width: 277px;
+    height: 72px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.error {
+    position: absolute !important;
+    background-color: #E1445C;
+    width: 360px;
+    height: 46px;
+    border-radius: 15px;
+    left: 40%;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    font-size: 14px;
+    text-align: center;
+    line-height: 46px;
+}
+
+.sucsses {
+    position: absolute !important;
+    background-color: #00C775;
+    width: 360px;
+    height: 46px;
+    border-radius: 15px;
+    left: 40%;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    font-size: 14px;
+    text-align: center;
+    line-height: 46px;
+}

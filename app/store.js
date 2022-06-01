@@ -5,6 +5,9 @@ import { productsApi } from '../services/fetchProducts'
 import filtersReducer from "../feactures/filtersSlice";
 import allProductsSlice from "../feactures/allProductsSlice";
 import cartSlice from '../feactures/cartSlice'
+import loginSlice from "../feactures/loginSlice";
+import flagSlice from "../feactures/flagSlice";
+import userInfoSlice from "../feactures/userInfoSlice";
 
 
 export const store = configureStore({
@@ -13,8 +16,9 @@ export const store = configureStore({
         filters: filtersReducer,
         products: allProductsSlice,
         cart: cartSlice,
-
-
+        login: loginSlice,
+        flag: flagSlice,
+        userInfo: userInfoSlice,
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware().concat(productsApi.middleware),
