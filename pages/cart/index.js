@@ -8,6 +8,7 @@ import CartItem from '../../components/Cart/CartItem'
 import CartCalcu from '../../components/Cart/CartCalcu'
 import CartItemsList from '../../components/Cart/CartItemsList'
 import RegisterForm from '../../components/Cart/RegisterForm'
+import CartCountinue from '../../components/Cart/CartCountinue'
 
 function index() {
   let cart= useSelector((state)=> state.cart)
@@ -33,10 +34,10 @@ function index() {
         {/* conditional situation for form/cartitem list/countinue to pay */}
        
   
-   { !flag && !login
+   { !flag && !login || !flag && login
       ? <CartItemsList />
       : ( flag && !login
-        ? <RegisterForm />: <p>edamede faraiyande kharid</p>
+        ? <RegisterForm /> : <CartCountinue />
         // : ( condition3
         //   ? <Component3 />
         //   : <Component 4 />

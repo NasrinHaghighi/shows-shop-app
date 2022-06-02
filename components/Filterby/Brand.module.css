@@ -1,7 +1,7 @@
 .main {
     margin-bottom: 5px;
-    background-color: var( --clr-bgProduct-1);
-    margin-top: 5px;
+    background-color: var( --clr-bgProduct-1) !important;
+    margin-top: 5px !important;
 }
 
 .list {

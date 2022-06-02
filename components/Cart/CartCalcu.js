@@ -18,10 +18,14 @@ function CartCalcu() {
   let  flag =useSelector((state=> state.flag))
   flag=flag.flag
 
- 
-   const handelchange=()=>{
-     dispatch(flagChange(flag))
-       }
+  const handelchange=()=>{
+    dispatch(flagChange(true))
+      }
+///get flagValueInfo from store//when is true means all the info from the form are correctly saved//
+  let  flagValuesInfo =useSelector((state=> state.flagValuesInfo))
+  flagValuesInfo=flagValuesInfo.flagValuesInfo
+
+  console.log(flagValuesInfo)
 
     ///
     const { total_price, total_discont ,total_amount, total_maliat} = cart.reduce((total, cartItem) => {
@@ -60,7 +64,33 @@ const finalPrice=( total_price-total_discont)+total_maliat
     <button className={styles.code}> کد تخفیف</button><button className={styles.applyCode}>اعمال</button>
     </div>
     <div className={styles.finalPrice}> مبلغ نهایی :<span>{finalPrice} تومان</span></div>
-    <button className={styles.continue} onClick={handelchange}>{flag ? 'پرداخت' : 'ادامه فرایند خرید'} </button>
+   {
+    
+    !flag 
+    ? 
+    <button className={styles.continue} onClick={handelchange}> ادامه فرایند خرید </button>
+   
+    : (flag && !flagValuesInfo&&!login)?
+    <button className={styles.continue_disable} disabled onClick={handelchange}> مرحله بعدی غیر </button>
+      : (flag && flagValuesInfo&&!login)?
+      <button className={styles.continue} onClick={handelchange}> مرحله بعدی  </button>
+       : (flag &&  login)?
+       <button className={styles.continue} onClick={handelchange}> پرداخت  </button>
+      : ''
+    
+    } 
+
+
+{/* { !flag && !login
+      ? <CartItemsList />
+      : ( flag && !login
+        ? <RegisterForm />: <p>edamede faraiyande kharid</p>
+        // : ( condition3
+        //   ? <Component3 />
+        //   : <Component 4 />
+        // )
+      )
+    } */}
 </div>
     </div>
   )

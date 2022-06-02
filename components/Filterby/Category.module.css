@@ -1,6 +1,6 @@
 .main {
     margin-bottom: 5px;
-    background-color: var( --clr-bgProduct-1);
+    background-color: var( --clr-bgProduct-1) !important;
     margin-top: 5px;
 }
 

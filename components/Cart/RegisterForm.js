@@ -5,7 +5,10 @@ import { useFormik } from 'formik';
 import map from '../../public/images/Group 598.png'
 import {useDispatch , useSelector} from 'react-redux'
 
+import {changeFlagValuesInfo} from '../../feactures/flagValuesInfoSlice'
+
 import {setUserInfo } from '../../feactures/userInfoSlice'
+import {loginUser} from '../../feactures/loginSlice'
 
 function RegisterForm() {
     const dispatch = useDispatch()
@@ -35,7 +38,10 @@ const formik = useFormik({
      onSubmit:(values)=>{
       setSucces(true)
       dispatch(setUserInfo(values))
-    console.log(values)
+    //this func is to change the falge when the user fill inputs correctly// by change this flag to true the text of button change
+      dispatch(changeFlagValuesInfo(true))
+      dispatch(loginUser(true))
+   
      },
      validate: values=>{
       ///values.name values.plak ....

@@ -8,6 +8,7 @@ import cartSlice from '../feactures/cartSlice'
 import loginSlice from "../feactures/loginSlice";
 import flagSlice from "../feactures/flagSlice";
 import userInfoSlice from "../feactures/userInfoSlice";
+import flagValuesInfoSlice from "../feactures/flagValuesInfoSlice";
 
 
 export const store = configureStore({
@@ -19,6 +20,7 @@ export const store = configureStore({
         login: loginSlice,
         flag: flagSlice,
         userInfo: userInfoSlice,
+        flagValuesInfo: flagValuesInfoSlice
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware().concat(productsApi.middleware),

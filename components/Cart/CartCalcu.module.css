@@ -64,4 +64,13 @@
     font-size: 20px;
     color: var(--clr-whit);
     background-color: var( --clr-footer-1);
+    cursor: pointer;
+}
+
+.continue_disable {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 20px;
+    color: var(--clr-whit);
+    background-color: var( --clr-btn-disable);
 }
