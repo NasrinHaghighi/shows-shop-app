@@ -1,6 +1,9 @@
 import React from 'react'
 import {useRouter} from 'next/router'
+import Image from 'next/image'
+
 import Link from 'next/link'
+import arrowback from '../../public/images/Group 974.png'
 
 import { useSelector } from 'react-redux'
 import styles from './ProductId.module.css'
@@ -25,7 +28,12 @@ function SingleProductPage() {
   
   return (
     <>
+ 
     <div className={styles.ProductSinglePageContainer}>
+    <div className={styles.header}>
+      <spn></spn>
+    <span><Link href="/products"><a><Image src={arrowback}/></a></Link></span>
+    </div>
   <div className={styles.singlepageBanner}>
      <div><SingleProductInfo {...singleProduct}/></div>
      <div><ProductImage {...singleProduct}/></div> 

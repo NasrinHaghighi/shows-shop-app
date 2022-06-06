@@ -23,11 +23,16 @@ function index() {
 
   return (
     <div className={styles.container}>
-     
-        
-        
+               
         <div className={styles.header}>
-           <p>سبد خرید</p>
+        { !flag && !login || !flag && login
+      ?  <p>سبد خرید</p>
+      : ( flag && !login
+        ? <p>مشخصات</p> : <p>لیست نهایی خرید و پرداخت</p>
+      
+      )
+    }
+          
            <span><Link href="/products"><a><Image src={arrowback}/></a></Link></span>
         </div>
         <div  className={styles.main}>
@@ -38,14 +43,11 @@ function index() {
       ? <CartItemsList />
       : ( flag && !login
         ? <RegisterForm /> : <CartCountinue />
-        // : ( condition3
-        //   ? <Component3 />
-        //   : <Component 4 />
-        // )
+      
       )
     }
 
-          {/* <CartItemsList /> */}
+       
      
 
 

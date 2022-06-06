@@ -12,7 +12,7 @@ function ColorPart({colors, selectColor, mainColor}) {
           return(
             <button 
             key={index}
-             style={{background:color}}
+             style={{background:color }}
               className={mainColor === color? styles.colorBtnActive : styles.colorBtn}
               onClick={() => {selectColor(color)}}
            > 

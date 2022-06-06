@@ -1,3 +1,9 @@
+.sortbyContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .sortby {
     margin: 35px 0 45px 0;
     display: flex;

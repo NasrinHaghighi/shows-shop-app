@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import Banner from '../components/Banner/Banner'
 import BannerFooter from '../components/BannerFooter/BannerFooter'
 import Feature from '../components/Feature/Feature'
@@ -44,11 +45,34 @@ export default function Home() {
       <main className={styles.main}>
       <Banner />
       <BannerFooter />
-      <div className={styles.relevent}>
+      <div className={styles.releventContainer}>
+        <div className={styles.header}>
+        <h4><Link href="/products"><a>مشاهده همه</a></Link></h4>
+          
+          <h2>جدیدترین ها</h2>
+        </div>
+<div className={styles.relevent}>
    {products && products.slice(0,4).map((item)=>{
   return <Product key={item.id}{...item}/>
   })}  
+  </div>
       </div>
+
+
+      <div className={styles.releventContainer}>
+        <div className={styles.header}>
+        
+        <h4><Link href="/products"><a>مشاهده همه</a></Link></h4>
+          <h2>پرفروش ترین ها</h2>
+        </div>
+<div className={styles.relevent}>
+   {products && products.slice(0,4).map((item)=>{
+  return <Product key={item.id}{...item}/>
+  })}  
+  </div>
+      </div>
+
+
       <Feature />
       </main>
 

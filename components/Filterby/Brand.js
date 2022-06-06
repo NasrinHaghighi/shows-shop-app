@@ -14,14 +14,28 @@ import{ products }from '../../services/productsList'
 import styles from './Brand.module.css'
 
 import { addBrand } from '../../feactures/filtersSlice';
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 
 function Brand() {
 let brands = [...new Set(products.map(item => item.brand))];
 
- const [brandSele, setBrandSele]=  useState([])
- const dispatch = useDispatch()
 
+const [brandSele, setBrandSele]=  useState([])
+const dispatch = useDispatch()
+
+
+
+////////////////////////////////////////////////
+ const filters= useSelector(state=>state.filters)
+ const brandsinfilters=filters.brand
+ console.log(brandSele)
+ console.log(brandsinfilters)
+ const stateFlag= filters.flag
+ console.log(stateFlag)
+
+
+
+///////////////////////////////
 const makeBrandsList=(e)=>{
  if(e.target.checked){
   setBrandSele([...brandSele, e.target.value])
@@ -33,7 +47,9 @@ const makeBrandsList=(e)=>{
  setBrandSele([...brandSele])
  }
 }
+/////////////////
 
+/////////////
 useEffect(() => {
   dispatch(addBrand(brandSele))
 }, [brandSele])
@@ -60,7 +76,7 @@ useEffect(() => {
                     name={c}
                   value={c}
                   color="default"
-                 //checked={filterOption.selectedBrand.includes(c)}
+                 checked={brandsinfilters.includes(c)}
                   onChange={makeBrandsList}
                    />} 
                 label={c}/> 
@@ -79,20 +95,3 @@ useEffect(() => {
 export default Brand
 
 
-// if(e.target.checked){
-//   if(!brandSele.find(i=> i === e.target.value)){
-//     setBrandSele([...brandSele, e.target.value])
-//     console.log(`after click ${brandSele}`)
-//     dispatch(addBrand(brandSele))
-//   }
-
-// }else{
-// const index=brandSele.indexOf(e.target.value)
-// if(index>-1){
-//  brandSele.splice(index, 1)
-
-//  setBrandSele([...brandSele])
-//  dispatch(addBrand(brandSele))
-// }
-
-// }

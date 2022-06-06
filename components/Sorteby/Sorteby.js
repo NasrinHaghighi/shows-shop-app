@@ -3,6 +3,10 @@ import styles from './Sorteby.module.css'
 import {sortProductsHandler} from '../../feactures/allProductsSlice'
 import { useDispatch } from 'react-redux';
 
+import Image from 'next/image'
+import Link from 'next/link'
+import arrowback from '../../public/images/Group 974.png'
+
 const data = [  
     {  
       id: 1,  
@@ -42,6 +46,7 @@ function Sorteby() {
 
     const dispatch= useDispatch()
   return (
+    <div className={styles.sortbyContainer}>
     <div className={styles.sortby}>
         <span className={styles.sortBtn}> مرتب سازی بر اساس :</span>
         <ul className={styles.sorteUl}>
@@ -54,6 +59,9 @@ function Sorteby() {
         })}
 
         </ul>
+      
+    </div>
+    <div><Link href="/"><a><Image src={arrowback}/></a></Link></div>
     </div>
   )
 }

@@ -20,13 +20,10 @@ export const allProductsSlice = createSlice({
             const { brand, category, minPrice, maxPrice } = action.payload
             let tempProducts = [...products];
 
-            console.log(`minprice${minPrice}`)
-            console.log(`maxprice${maxPrice}`)
-                //console.log(products)
-            if (minPrice >= 100 || maxPrice <= 1000) {
-                const t = tempProducts.filter(item => item.price >= minPrice && item.price <= maxPrice)
-                state.products = t
-            }
+            //console.log(`minprice${minPrice}`)
+            //console.log(`maxprice${maxPrice}`)
+            //console.log(products)
+
             if (brand.length > 0) {
                 tempProducts = tempProducts.filter(item => brand.indexOf(item.brand) !== -1)
                 state.products = tempProducts
@@ -38,6 +35,10 @@ export const allProductsSlice = createSlice({
             if (category.length > 0) {
                 tempProducts = tempProducts.filter(item => category.indexOf(item.category) !== -1)
                 state.products = tempProducts
+            }
+            if (minPrice >= 100 || maxPrice <= 1000) {
+                const t = tempProducts.filter(item => item.price >= minPrice && item.price <= maxPrice)
+                state.products = t
             }
         },
         sortProductsHandler: (state, action) => {
@@ -67,6 +68,11 @@ export const allProductsSlice = createSlice({
                 state.products = tempProducts
             }
 
+        },
+        clearAllFilter: (state, action) => {
+            state.products = products
+
+
         }
 
 
@@ -75,7 +81,7 @@ export const allProductsSlice = createSlice({
 })
 
 
-export const { getAllProducts, fillterProductsHandler, sortProductsHandler } = allProductsSlice.actions
+export const { getAllProducts, fillterProductsHandler, sortProductsHandler, clearAllFilter } = allProductsSlice.actions
 export default allProductsSlice.reducer
 
 // tempProducts = tempProducts.filter((item) => {

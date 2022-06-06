@@ -8,6 +8,8 @@ import Brand from './Brand'
 import Availeble from './Availeble';
 import FilterRange from './FilterRang';
 import {fillterProductsHandler} from '../../feactures/allProductsSlice'
+import {clearAllFilter} from '../../feactures/allProductsSlice'
+import {clearFilterOption} from '../../feactures/filtersSlice'
 import { useDispatch, useSelector } from 'react-redux';
 
 function Filterby() {
@@ -25,7 +27,7 @@ function Filterby() {
         <FilterRange /> 
        <div className={styles.btnContainer}>
        <Button  onClick={() => dispatch(fillterProductsHandler(filters))}> اعمال فیلترها </Button>
-        <Button  onClick={() => { alert('clicado'); }}> پاک کردن</Button>
+        <Button  onClick={() =>{ dispatch(clearAllFilter());dispatch(clearFilterOption())}}> پاک کردن</Button>
         </div>
         </FormControl>
   )

@@ -71,7 +71,7 @@ const finalPrice=( total_price-total_discont)+total_maliat
     <button className={styles.continue} onClick={handelchange}> ادامه فرایند خرید </button>
    
     : (flag && !flagValuesInfo&&!login)?
-    <button className={styles.continue_disable} disabled onClick={handelchange}> مرحله بعدی غیر </button>
+    <button className={styles.continue_disable} disabled onClick={handelchange}> مرحله بعدی  </button>
       : (flag && flagValuesInfo&&!login)?
       <button className={styles.continue} onClick={handelchange}> مرحله بعدی  </button>
        : (flag &&  login)?

@@ -5,6 +5,7 @@ const initialState = {
     minPrice: 100,
     maxPrice: 1000,
     availble: true,
+    flag: false
 }
 
 export const filtersSlice = createSlice({
@@ -23,9 +24,16 @@ export const filtersSlice = createSlice({
         addMinPrice: (state, action) => {
             state.minPrice = action.payload
         },
+        clearFilterOption: (state, action) => {
+            state.brand = []
+            state.category = []
+            state.minPrice = 100
+            state.maxPrice = 1000
+            state.flag = true
+        }
     },
 
 })
 
-export const { addBrand, addCategory, addMaxPrice, addMinPrice } = filtersSlice.actions
+export const { addBrand, addCategory, addMaxPrice, addMinPrice, clearFilterOption } = filtersSlice.actions
 export default filtersSlice.reducer

@@ -1,6 +1,15 @@
+.releventContainer {
+    margin: 140px 80px 40px 80px;
+}
+
 .relevent {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 80px;
     direction: rtl;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
