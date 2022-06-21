@@ -30,10 +30,13 @@ export const filtersSlice = createSlice({
             state.minPrice = 100
             state.maxPrice = 1000
             state.flag = true
+        },
+        cahngeStateFlag: (state, action) => {
+            state.flag = action.payload
         }
     },
 
 })
 
-export const { addBrand, addCategory, addMaxPrice, addMinPrice, clearFilterOption } = filtersSlice.actions
+export const { addBrand, addCategory, addMaxPrice, addMinPrice, clearFilterOption, cahngeStateFlag } = filtersSlice.actions
 export default filtersSlice.reducer

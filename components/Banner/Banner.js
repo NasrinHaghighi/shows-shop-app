@@ -15,7 +15,7 @@ function Banner() {
         <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
 </div>
 <div className={styles.bannerRight}>
-       <Image src={show}/>
+       <Image src={show} className={styles.bannerRightImg}/>
 </div>
 
         </div>

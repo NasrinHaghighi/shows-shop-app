@@ -65,10 +65,10 @@ export default function Home() {
         <h4><Link href="/products"><a>مشاهده همه</a></Link></h4>
           <h2>پرفروش ترین ها</h2>
         </div>
-<div className={styles.relevent}>
-   {products && products.slice(0,4).map((item)=>{
-  return <Product key={item.id}{...item}/>
-  })}  
+ <div className={styles.relevent}>
+            {products && products.slice(0,4).map((item)=>{
+          return <Product key={item.id}{...item}/>
+           })}  
   </div>
       </div>
 

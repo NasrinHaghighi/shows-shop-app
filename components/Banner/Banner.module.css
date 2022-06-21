@@ -16,6 +16,10 @@
     padding: 180px 115px;
 }
 
+.bannerRightImg {
+    object-fit: contain
+}
+
 .bannerLeft {
     display: flex;
     flex-direction: column;
@@ -49,3 +53,11 @@
     color: var(--clr-text-1);
     line-height: normal;
 }
+
+
+/* @media screen and (max-width: 900px) {
+    .bannerLeft div h1 {
+        font-size: 84px;
+        color: aquamarine;
+    }
+} */

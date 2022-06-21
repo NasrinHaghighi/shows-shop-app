@@ -14,6 +14,7 @@ import{ products }from '../../services/productsList'
 import styles from './Brand.module.css'
 
 import { addBrand } from '../../feactures/filtersSlice';
+import {cahngeStateFlag } from '../../feactures/filtersSlice';
 import {useDispatch, useSelector} from 'react-redux'
 
 function Brand() {
@@ -21,6 +22,7 @@ let brands = [...new Set(products.map(item => item.brand))];
 
 
 const [brandSele, setBrandSele]=  useState([])
+const [flag, setFlag]= useState(false)
 const dispatch = useDispatch()
 
 
@@ -54,6 +56,20 @@ useEffect(() => {
   dispatch(addBrand(brandSele))
 }, [brandSele])
 
+useEffect(()=>{
+  console.log('the brandsele array shoul return to the []')
+  setBrandSele([])
+ dispatch(cahngeStateFlag(false))
+},[stateFlag])
+
+
+
+// if(stateFlag){
+//   console.log('the brandsele array shoul return to the []')
+//   setBrandSele([])
+//   console.log(brandSele)
+// }
+
 
   return (
     <div>
@@ -70,12 +86,12 @@ useEffect(() => {
           <List className={styles.list}>
               {brands.map((c)=>{
          return(  
-                   <ListItem  key={c} className={styles.listItem}>
+                  <ListItem  key={c} className={styles.listItem}>
                   <FormControlLabel control={<Checkbox
-                   type="checkbox"
-                    name={c}
-                  value={c}
-                  color="default"
+                  type="checkbox"
+                 name={c}
+                 value={c}
+                 color="default"
                  checked={brandsinfilters.includes(c)}
                   onChange={makeBrandsList}
                    />} 

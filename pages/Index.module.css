@@ -3,8 +3,9 @@
 }
 
 .relevent {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 420px);
+    gap: 10px;
     direction: rtl;
 }
 
@@ -13,3 +14,12 @@
     justify-content: space-between;
     align-items: center;
 }
+
+
+/* @media screen and (max-width: 900px) {
+    .relevent {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: blue;
+    }
+} */
