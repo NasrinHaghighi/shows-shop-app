@@ -5,6 +5,7 @@ import Slider from '@mui/material/Slider';
 import styles from './FilterRang.module.css'
 
 import { addMaxPrice, addMinPrice } from '../../feactures/filtersSlice';
+import {retrunMinPrice } from '../../feactures/filtersSlice';
 const valuetext=(value) =>{
   return `${value}`;
 }
@@ -13,14 +14,17 @@ const minDistance = 10;
 
  const FilterRange =() =>{
    const dispatch =useDispatch()
-//    const filterOption= useSelector(state=>state.filterOption)
-//    const minPrice= filterOption.minPrice
-//    const maxPrice= filterOption.maxPrice
+   const filters= useSelector(state=>state.filters)
+   const stateFlag= filters.flag
+   console.log(stateFlag)
+
+   const minPrice= filters.minPrice
+   const maxPrice= filters.maxPrice
   
   
  
 
-  const [value1, setValue1] = React.useState([100,1000]);
+  const [value1, setValue1] = React.useState([minPrice,maxPrice]);
 
   const handleChange1 = (event, newValue, activeThumb) => {
     if (!Array.isArray(newValue)) {
@@ -34,13 +38,27 @@ const minDistance = 10;
     }
   };
 
+  useEffect(()=>{
+    if(!stateFlag) return
+     if(stateFlag){
+      setValue1([100,1000])
+  
+   
+    }
+
+   },[stateFlag],[filters.minPrice])
+
  useEffect(() => {
-   dispatch(addMaxPrice(value1[1]))
+   dispatch(addMaxPrice(value1[1]),filters)
   }, [value1[1]])
 
  useEffect(() => {
-  dispatch(addMinPrice(value1[0]))
+  dispatch(addMinPrice(value1[0]),filters)
+ 
   }, [value1[0]])
+
+  //useEffect to return price to initial value when click on cleaer btn//
+  
 
 
   return (

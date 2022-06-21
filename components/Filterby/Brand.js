@@ -22,7 +22,6 @@ let brands = [...new Set(products.map(item => item.brand))];
 
 
 const [brandSele, setBrandSele]=  useState([])
-const [flag, setFlag]= useState(false)
 const dispatch = useDispatch()
 
 
@@ -30,10 +29,10 @@ const dispatch = useDispatch()
 ////////////////////////////////////////////////
  const filters= useSelector(state=>state.filters)
  const brandsinfilters=filters.brand
- console.log(brandSele)
- console.log(brandsinfilters)
+ //console.log(brandSele)
+ //console.log(brandsinfilters)
  const stateFlag= filters.flag
- console.log(stateFlag)
+// console.log(stateFlag)
 
 
 
@@ -57,9 +56,9 @@ useEffect(() => {
 }, [brandSele])
 
 useEffect(()=>{
-  console.log('the brandsele array shoul return to the []')
+  //console.log('the brandsele array shoul return to the []')
   setBrandSele([])
- dispatch(cahngeStateFlag(false))
+  dispatch(cahngeStateFlag(false))
 },[stateFlag])
 
 
